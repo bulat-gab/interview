@@ -1,0 +1,14 @@
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\obj\Debug\netcoreapp2.2\NumberComparison.csprojAssemblyReference.cache
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\obj\Debug\netcoreapp2.2\NumberComparison.csproj.CoreCompileInputs.cache
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\obj\Debug\netcoreapp2.2\NumberComparison.AssemblyInfoInputs.cache
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\obj\Debug\netcoreapp2.2\NumberComparison.AssemblyInfo.cs
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\bin\Debug\netcoreapp2.2\nunit.engine.netstandard.dll
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\bin\Debug\netcoreapp2.2\NumberComparison.deps.json
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\bin\Debug\netcoreapp2.2\NumberComparison.runtimeconfig.json
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\bin\Debug\netcoreapp2.2\NumberComparison.runtimeconfig.dev.json
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\bin\Debug\netcoreapp2.2\NumberComparison.dll
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\bin\Debug\netcoreapp2.2\NumberComparison.pdb
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\obj\Debug\netcoreapp2.2\NumberComparison.dll
+C:\Users\gabbr\projects\interview\Csharp\NumberComparison\obj\Debug\netcoreapp2.2\NumberComparison.pdb
