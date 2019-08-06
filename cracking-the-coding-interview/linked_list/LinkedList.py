@@ -1,0 +1,73 @@
+from __future__ import print_function 
+
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+    
+    def __str__(self):
+        return self.data
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+    
+    def print_list(self):
+        temp = self.head
+
+        while temp is not None:
+            print(temp.data, end='->')
+            temp = temp.next
+        print()
+
+    def add(self, value):
+        new_node = Node(value)
+
+        if self.tail is None:
+            self.tail = new_node
+            self.head = self.tail
+        else:
+            self.tail.next = new_node
+            self.tail = new_node
+            self.tail.next = None
+    
+    def remove(self):
+        if self.head is None:
+            return
+        if self.head.next is None:
+            self.head = None
+            self.tail = None
+            return
+        
+        deleted_node = self.head
+        self.head = self.head.next
+
+        return deleted_node
+    
+    @classmethod
+    def get_sample(cls, size=5):
+        l = LinkedList()
+        for i in range(size):
+            l.add(i)
+        return l
+
+
+# l = LinkedList()
+# n1 = Node('1')
+# n2 = Node('2')
+# n3 = Node('3')
+# n4 = Node('4')
+# n5 = Node('5')
+
+# l.add(n1)
+# l.add(n2)
+# l.add(n3)
+# l.add(n4)
+# l.add(n5)
+# l.print_list()
+# l.remove()
+# l.remove()
+# l.remove()
+# l.remove()
+# l.print_list()
