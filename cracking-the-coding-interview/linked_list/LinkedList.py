@@ -12,14 +12,6 @@ class LinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
-    
-    def print_list(self):
-        temp = self.head
-
-        while temp is not None:
-            print(temp.data, end='->')
-            temp = temp.next
-        print()
 
     def add(self, value):
         new_node = Node(value)
@@ -45,6 +37,35 @@ class LinkedList:
 
         return deleted_node
     
+    def remove(self, value):
+        current = self.head
+        previous = None
+        found = False
+        while current and found is False:
+            if current.data == value:
+                found = True
+            else:
+                previous = current
+                current = current.next
+        if current is None:
+            raise ValueError("Value not in list")
+        if previous is None:
+            self.head = current.next
+        else:
+            previous.next = current.next
+
+    def __iter__(self):
+        current = self.head
+        while current is not None:
+            yield current.data
+            current = current.next
+
+    def __str__(self):
+        return str(list(self))
+
+    def size(self):
+        return len(list(self))
+
     @classmethod
     def get_sample(cls, size=5):
         l = LinkedList()
