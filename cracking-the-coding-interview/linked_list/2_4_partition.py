@@ -8,9 +8,9 @@ def get_partition(l, x):
     while current is not None:
 
         if (current.data < x):
-            left_ll.add(current.data)
+            left_ll.add_to_tail(current.data)
         else:
-            right_ll.add(current.data)
+            right_ll.add_to_tail(current.data)
 
         current = current.next
     

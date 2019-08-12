@@ -29,9 +29,9 @@ def remove_dups(l):
     
 
 l = LinkedList.get_sample()
-l.add(3)
-l.add(3)
-l.add(2)
+l.add_to_tail(3)
+l.add_to_tail(3)
+l.add_to_tail(2)
 
 print(l)
 

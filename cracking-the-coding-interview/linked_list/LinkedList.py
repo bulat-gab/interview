@@ -13,7 +13,12 @@ class LinkedList:
         self.head = None
         self.tail = None
 
-    def add(self, value):
+    def add_to_head(self, value):
+        newest = Node(value)
+        newest.next = self.head
+        self.head = newest
+
+    def add_to_tail(self, value):
         new_node = Node(value)
 
         if self.tail is None:
@@ -24,7 +29,7 @@ class LinkedList:
             self.tail = new_node
             self.tail.next = None
     
-    def remove(self):
+    def remove_from_head(self):
         if self.head is None:
             return
         if self.head.next is None:
@@ -70,9 +75,8 @@ class LinkedList:
     def get_sample(cls, size=5):
         l = LinkedList()
         for i in range(size):
-            l.add(i)
+            l.add_to_tail(i)
         return l
-
 
 # l = LinkedList()
 # n1 = Node('1')
