@@ -1,11 +1,4 @@
-# import sys
-# import os
-
-# sys.path.insert(0, "../linked_list/")
-# from LinkedList import LinkedList, Node
-# # from linked_list import LinkedList, Node
-
-from utils.LinkedList import LinkedList, Node
+from LinkedList import LinkedList, Node
 
 class Stack():
     def __init__(self):

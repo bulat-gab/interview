@@ -33,9 +33,10 @@ class LinkedList:
         if self.head is None:
             return
         if self.head.next is None:
+            deleted_node = self.head
             self.head = None
             self.tail = None
-            return
+            return deleted_node
         
         deleted_node = self.head
         self.head = self.head.next
