@@ -54,3 +54,9 @@ class SetOfStacks():
             if not self.stacks[i].is_empty():
                 return self.stacks[i].pop()
         raise ValueError('Set of stacks is empty')
+
+    def peek(self):
+        for i in range(self.size-1, 0, -1):
+            if not self.stacks[i].is_empty():
+                return self.stacks[i].peek()
+        raise ValueError('Set of stacks is empty')
