@@ -3,49 +3,81 @@ class Node:
         self.left = None
         self.right = None
         self.val = key
+    
+    def __str__(self):
+        return str(self.val)
 
-class BinaryTree:
+class BST:
     def __init__(self):
         self.root = None
 
-    def add(self, key: int):
-        if self.root is None:
+    def add(self, key):
+        if not self.root:
             self.root = Node(key)
-            return
-
-        if self.root.val >= key:
-            _add(self.root.left, key)
         else:
-            _add(self.root.right, key)
-            
-
-    def _add(self, node: Node, key: int):
-        if node.val >= key:
-            _add(node.left, key)
-        else:
-            _add(node.right, key)
-
-    def to_string(self):
-        if self.root is None:
-            return ''
-        
-        _inorder(self.root.left)
-        print(self.root.val, end=' ')
-        _inorder(self.root.right, end=' ')
+            self._add(self.root, key)
     
-    def _inorder(self, node: Node):
-        if node is not None:
-            return
+    def _add(self, node: Node, key):
+        if key <= node.val:
+            if node.left:
+                self._add(node.left, key)
+            else:
+                node.left = Node(key)
+        else:
+            if node.right:
+                self._add(node.right, key)
+            else:
+                node.right = Node(key)
 
-        _inorder(node.left)
-        print(node.val, end=' ')
-        _inorder(node.right, end=' ')
-        
+    def str_inorder(self):
+        self.sorted = []
+        self.get_inorder(self.root)
+        return str(self.sorted)
+
+    def get_inorder(self, node):
+        if node:
+            self.get_inorder(node.left)
+            self.sorted.append(str(node))
+            self.get_inorder(node.right)
+    
+    def str_preorder(self):
+        self.sorted = []
+        self.get_preorder(self.root)
+        return str(self.sorted)
+
+    def get_preorder(self, node):
+        if node:
+            self.sorted.append(str(node))
+            self.get_preorder(node.left)
+            self.get_preorder(node.right)
+
+    def str_postorder(self):
+        self.sorted = []
+        self.get_postorder(self.root)
+        return str(self.sorted)
+
+    def get_postorder(self, node):
+        if node:
+            self.get_postorder(node.left)
+            self.get_postorder(node.right)
+            self.sorted.append(str(node))
+
 
 if __name__ == "__main__":
-    bt = BinaryTree()
-    bt.add(4)
-    bt.add(3)
-    bt.add(2)
-    bt.add(5)
-    bt.add(1)
+    # bst = BST()
+    # bst.add(3)
+    # bst.add(4)
+    # bst.add(2)
+    # bst.add(5)
+    # bst.add(1)
+    # print(bst.str_inorder())
+    # print(bst.str_postorder())
+    # print(bst.str_preorder())
+
+    from random import randint
+
+    bst = BST()
+
+    for i in range(10):
+        bst.add(randint(1, 1000))
+    print(bst.str_inorder())
