@@ -12,8 +12,8 @@ class Node:
         return self.right != None
 
 class BST:
-    def __init__(self):
-        self.root: Node = None
+    def __init__(self, root=None):
+        self.root: Node = root
         self.size: int = 0
     
     def length(self):
@@ -46,6 +46,23 @@ class BST:
         else:
             # Trying to add existing key will result in replacing that key's value
             currentNode.value = v
+
+    def get(self, k):
+        if self.root is None:
+            return None
+        
+        return self._get(k, self.root)
+    
+    def _get(self, k, node):
+        if not node :
+            return None
+
+        if node.key == k:
+            return node
+        elif k < node.key:
+            return self._get(k, node.left)
+        else:
+            return self._get(k, node.right)
 
     def inorder(self):
         if not self.root:
