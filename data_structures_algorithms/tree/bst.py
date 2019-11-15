@@ -47,6 +47,9 @@ class BST:
             # Trying to add existing key will result in replacing that key's value
             currentNode.value = v
 
+    def __setitem__(self,k,v):
+        self.put(k,v)
+
     def get(self, k):
         if self.root is None:
             return None
@@ -64,20 +67,24 @@ class BST:
         else:
             return self._get(k, node.right)
 
+    def __getitem__(self,key):
+        return self.get(key)
+
     def inorder(self):
         if not self.root:
-            return
+            return []
         
-        self._inorder(self.root)
+        return self._inorder(self.root)
     
     def _inorder(self, currentNode):
-        if not currentNode:
-            return
+        res = []
 
-        self._inorder(currentNode.left)
-        print(f"{currentNode.key} : {currentNode.value}") 
-        self._inorder(currentNode.right) 
+        if currentNode:
+            res = self._inorder(currentNode.left)
+            res.append((currentNode.key, currentNode.value)) # print(f"{currentNode.key} : {currentNode.value}") 
+            res += self._inorder(currentNode.right) 
 
+        return res
 
 
 if __name__ == "__main__":

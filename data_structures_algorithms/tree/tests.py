@@ -5,12 +5,30 @@ class BinarySearchTreeTests(unittest.TestCase):
     def test_get(self):
         bst = self._generate_tree()
 
-        self.assertEqual(bst.get(1).value, '1')
-        self.assertEqual(bst.get(8).value, '8')
-        self.assertEqual(bst.get(50).value, '50')
-        self.assertIsNone(bst.get(100))
+        self.assertEqual(bst[1].value, '1')
+        self.assertEqual(bst[8].value, '8')
+        self.assertEqual(bst[50].value, '50')
+        self.assertIsNone(bst[100])
     
+    def test_put(self):
+        bst = BST()
+        # bst.put
+        pass
+
+    def test_inorder(self):
+        bst = self._generate_tree()
+        inorder = [k for (k,v) in bst.inorder()]
+        self.assertEqual(inorder, [1, 5, 8, 10, 40, 50])
+
     def _generate_tree(self):
+        """
+                    10
+                   /  \
+                  5    40
+                 / \     \
+                1   8     50
+        """
+
         n1 = Node(1, '1')
         n2 = Node(8, '8')
         n3 = Node(5, '5', n1, n2)
@@ -24,3 +42,4 @@ class BinarySearchTreeTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+    
