@@ -1,5 +1,6 @@
 import unittest
 from bst import BST, Node
+from heap import Heap
 
 class BinarySearchTreeTests(unittest.TestCase):
     def test_get(self):
@@ -39,6 +40,17 @@ class BinarySearchTreeTests(unittest.TestCase):
         root = Node(10, '10', n3, n5)
 
         return BST(root)
+
+class HeapTests(unittest.TestCase):
+    def testAdd(self):
+        expectedHeap = [58, 40, 50, 31, 3, 40] 
+        maxHeap = Heap()
+
+        for elem in expectedHeap:
+            maxHeap.add(elem)
+        
+        for index in range(len(expectedHeap)):
+            self.assertEqual(self.arr[i], expectedHeap[i])
 
 if __name__ == "__main__":
     unittest.main()
