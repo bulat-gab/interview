@@ -70,21 +70,32 @@ class BST:
     def __getitem__(self,key):
         return self.get(key)
 
-    def inorder(self):
-        if not self.root:
-            return []
+    # def inorder(self):
+    #     if not self.root:
+    #         return []
         
+    #     return self._inorder(self.root)
+    
+    # def _inorder(self, currentNode):
+    #     res = []
+
+    #     if currentNode:
+    #         res = self._inorder(currentNode.left)
+    #         res.append((currentNode.key, currentNode.value)) # print(f"{currentNode.key} : {currentNode.value}") 
+    #         res += self._inorder(currentNode.right) 
+
+    #     return res
+    
+    def inorder(self):
+        if self.root is None:
+            return []
         return self._inorder(self.root)
     
-    def _inorder(self, currentNode):
-        res = []
-
-        if currentNode:
-            res = self._inorder(currentNode.left)
-            res.append((currentNode.key, currentNode.value)) # print(f"{currentNode.key} : {currentNode.value}") 
-            res += self._inorder(currentNode.right) 
-
-        return res
+    def _inorder(self, currentNode: Node):
+        return (self._inorder(currentNode.left) +
+         [(currentNode.key, currentNode.value)] + 
+         self._inorder(currentNode.right)) \
+         if currentNode is not None else []
 
 
 if __name__ == "__main__":
