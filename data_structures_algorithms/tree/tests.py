@@ -13,8 +13,15 @@ class BinarySearchTreeTests(unittest.TestCase):
     
     def test_put(self):
         bst = BST()
-        # bst.put
-        pass
+        bst.put(10, '10')
+        bst.put(5, '5')
+        bst.put(40, '40')
+        bst.put(1, '1')
+        bst.put(8, '8')
+        bst.put(50, '50')
+        
+        inorder = [k for (k,v) in bst.inorder()]
+        self.assertEqual(inorder, [1, 5, 8, 10, 40, 50])
 
     def test_inorder(self):
         bst = self._generate_tree()
