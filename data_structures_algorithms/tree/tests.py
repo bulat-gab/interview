@@ -1,6 +1,6 @@
 import unittest
 from bst import BST, Node
-from heap import Heap
+from LevelOrderTraversal import BFS
 
 class BinarySearchTreeTests(unittest.TestCase):
     def test_get(self):
@@ -13,8 +13,15 @@ class BinarySearchTreeTests(unittest.TestCase):
     
     def test_put(self):
         bst = BST()
-        # bst.put
-        pass
+        bst.put(10, '10')
+        bst.put(5, '5')
+        bst.put(40, '40')
+        bst.put(1, '1')
+        bst.put(8, '8')
+        bst.put(50, '50')
+        
+        inorder = [k for (k,v) in bst.inorder()]
+        self.assertEqual(inorder, [1, 5, 8, 10, 40, 50])
 
     def test_inorder(self):
         bst = self._generate_tree()
@@ -40,17 +47,14 @@ class BinarySearchTreeTests(unittest.TestCase):
         root = Node(10, '10', n3, n5)
 
         return BST(root)
+    
+    def levelOrderTraversalTests(self):
+        bst = self._generate_tree()
+        bfs = BFS()
+        # expected = [10, 5, 40, 1, 8, 50]
+        bfs.traverse(bst.root)
 
-class HeapTests(unittest.TestCase):
-    def testAdd(self):
-        expectedHeap = [58, 40, 50, 31, 3, 40] 
-        maxHeap = Heap()
 
-        for elem in expectedHeap:
-            maxHeap.add(elem)
-        
-        for index in range(len(expectedHeap)):
-            self.assertEqual(self.arr[i], expectedHeap[i])
 
 if __name__ == "__main__":
     unittest.main()

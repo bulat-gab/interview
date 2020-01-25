@@ -69,22 +69,51 @@ class BST:
 
     def __getitem__(self,key):
         return self.get(key)
-
+    
     def inorder(self):
-        if not self.root:
+        if self.root is None:
             return []
-        
         return self._inorder(self.root)
     
-    def _inorder(self, currentNode):
-        res = []
+    def _inorder(self, currentNode: Node):
+        return (self._inorder(currentNode.left) +
+         [(currentNode.key, currentNode.value)] + 
+         self._inorder(currentNode.right)) \
+         if currentNode is not None else []
 
-        if currentNode:
-            res = self._inorder(currentNode.left)
-            res.append((currentNode.key, currentNode.value)) # print(f"{currentNode.key} : {currentNode.value}") 
-            res += self._inorder(currentNode.right) 
+    def delete(self, k):
+        if self.root is None:
+            return
+        
+        currentNode = self.root
+        parentNode = None
+        while currentNode is not None:
+            if currentNode.key < k:
+                parentNode = currentNode
+                currentNode = currentNode.right
+            elif currentNode.key > k:
+                parentNode = currentNode
+                currentNode = currentNode.left
+            else:
+                break
+        
+        if currentNode is None:
+            return
+        
+        # case 1: no children
+        if currentNode.left is None and currentNode.right is None:
+            if parentNode.left.key == currentNode.key:
+                parentNode.left = None
+                return currentNode
+            else:
+                parentNode.right = None
+                return currentNode
+        
+        # case 2: one child
+        # when left subtree exists
+        if currentNode.left is not None and currentNode.right is None:
+            pa
 
-        return res
 
 
 if __name__ == "__main__":
