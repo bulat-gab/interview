@@ -101,6 +101,51 @@ namespace Tasks.Graph
             }
         }
 
+        public IList<int> SpiralOrder(int[][] matrix)
+        {
+            if (matrix.Length == 0 || matrix[0].Length == 0)
+                return new List<int>();
+
+            var N = matrix.Length;
+            var M = matrix[0].Length;
+            var expectedSize = N * M;
+            
+            var result = new List<int>();
+
+            var startMargin = 0;
+            var endMargin = 0;
+
+            while (startMargin < N || startMargin < M)
+            {
+                for (int i = startMargin; i < M - endMargin; i++)
+                    result.Add(matrix[startMargin][i]);
+                if (result.Count == expectedSize)
+                    return result;
+
+                for (int i = 1 + startMargin; i < N - endMargin; i++)
+                    result.Add(matrix[i][M - 1 - endMargin]);
+                if (result.Count == expectedSize)
+                    return result;
+
+                for (int i = M - 2 - endMargin; i >= startMargin; i--)
+                    result.Add(matrix[N - 1 - endMargin][i]);
+                if (result.Count == expectedSize)
+                    return result;
+                
+                for (int i = N - 2 - endMargin; i > startMargin; i--)
+                    result.Add(matrix[i][startMargin]);
+                if (result.Count == expectedSize)
+                    return result;
+
+                startMargin++;
+                endMargin++;
+            }
+
+            return result;
+
+
+
+        }
         
     }
 }

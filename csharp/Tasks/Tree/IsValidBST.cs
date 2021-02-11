@@ -21,8 +21,8 @@
                 return false;
             }
 
-            var left = this.Impl(node.Left, lower, value);
-            var right = this.Impl(node.Right, value, upper);
+            var left = this.Impl(node.left, lower, value);
+            var right = this.Impl(node.right, value, upper);
 
             return left && right;
         }

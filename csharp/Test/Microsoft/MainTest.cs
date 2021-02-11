@@ -8,13 +8,13 @@ namespace Test.Microsoft
     public class MainTest
     {
         private Codility _underTest;
-        private CodilityOptimized _codilityOptimized;
+        private Tasks.Microsoft.Solution _solution;
 
         [SetUp]
         public void SetUp()
         {
             _underTest = new Codility();
-            _codilityOptimized = new CodilityOptimized();
+            _solution = new Tasks.Microsoft.Solution();
         }
         
         // [TestCase(1, new int[] { })]
@@ -25,12 +25,7 @@ namespace Test.Microsoft
         //
         //     Assert.AreEqual(expected, actual);
         // }
-
-        [Test]
-        public void Test2()
-        {
-            _codilityOptimized.FindCheese(new Maze());
-        }
+        
 
         [Test]
         public void Test3()

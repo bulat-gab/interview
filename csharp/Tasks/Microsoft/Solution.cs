@@ -4,24 +4,16 @@ using System.Linq;
 
 namespace Tasks.Microsoft
 {
+    /// <summary>
+    ///    Help the mouse to find cheese in a maze. You are given an interface IMaze with 2 methods:
+    ///     - TryMoveMouse that moves the mouse to a given direction, if possible. 
+    ///     - FoundCheese - returns true if the mouse and the cheese are at the same cell
+    ///    The mouse is generated in a random location in the maze.
+    /// </summary>
     public interface IMaze
     {
         bool TryMoveMouse(Direction direction);
         bool FoundCheese();
-    }
-    
-    public class Maze : IMaze
-    {
-        public bool TryMoveMouse(Direction direction)
-        {
-            Console.WriteLine($"Moved to: {direction}");
-            return true;
-        }
-
-        public bool FoundCheese()
-        {
-            return false;
-        }
     }
 
     public enum Direction
@@ -32,7 +24,7 @@ namespace Tasks.Microsoft
         Up
     }
 
-    public class CodilityOptimized
+    public class Solution
     {
         private readonly Dictionary<Direction, (int dx, int dy)> _directions = new Dictionary<Direction, (int dx, int dy)>
         {

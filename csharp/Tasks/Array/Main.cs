@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Priority_Queue;
 
 namespace Arrays
 {
@@ -107,6 +108,34 @@ namespace Arrays
             }
             
             return max;
+        }
+
+        public IList<int> TopKFrequentElements(int[] nums, int k)
+        {
+            var dict = new Dictionary<int ,int>();
+            foreach (var num in nums)
+            {
+                dict[num] = dict.GetValueOrDefault(num, 0) + 1;
+            }
+            
+            var pq = new SimplePriorityQueue<int>();
+            foreach (var (num, frequency) in dict)
+            {
+                pq.Enqueue(num, frequency);
+            }
+
+            var result = new List<int>();
+            for (int i = 0; i < k; i++)
+            {
+                result.Add(pq.Dequeue());
+            }
+
+            return result;
+        } 
+        
+        public int[][] IntervalIntersection(int[][] firstList, int[][] secondList) 
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -10,8 +10,8 @@ namespace Tree.Tests
         {
             var isValidBST = new IsValidBST();
             var root = new TreeNode<int>(2);
-            root.Left = new TreeNode<int>(1);
-            root.Right = new TreeNode<int>(3);
+            root.left = new TreeNode<int>(1);
+            root.right = new TreeNode<int>(3);
             
             var result = isValidBST.CheckIsValidBST(root);
             Assert.IsTrue(result);
@@ -22,10 +22,10 @@ namespace Tree.Tests
         {
             var isValidBST = new IsValidBST();
             var root = new TreeNode<int>(5);
-            root.Left = new TreeNode<int>(1);
-            root.Right = new TreeNode<int>(4);
-            root.Right.Left = new TreeNode<int>(3);
-            root.Right.Right = new TreeNode<int>(6);
+            root.left = new TreeNode<int>(1);
+            root.right = new TreeNode<int>(4);
+            root.right.left = new TreeNode<int>(3);
+            root.right.right = new TreeNode<int>(6);
             
             var result = isValidBST.CheckIsValidBST(root);
             Assert.IsFalse(result);
