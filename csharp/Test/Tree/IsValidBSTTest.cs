@@ -14,7 +14,7 @@ namespace Tree.Tests
             root.right = new TreeNode<int>(3);
             
             var result = isValidBST.CheckIsValidBST(root);
-            Assert.IsTrue(result);
+            Assert.That(result, Is.True);
         }
         
         [Test]
@@ -28,7 +28,7 @@ namespace Tree.Tests
             root.right.right = new TreeNode<int>(6);
             
             var result = isValidBST.CheckIsValidBST(root);
-            Assert.IsFalse(result);
+            Assert.That(result, Is.False);
         }
     }
 }

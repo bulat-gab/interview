@@ -22,7 +22,7 @@ namespace Test.Graph
             };
 
             var actual = _underTest.FindWordOnTheGrid(grid, word);
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(expected, actual);
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Test.Microsoft
         // {
         //     var actual = _underTest.FindCheese(input);
         //
-        //     Assert.AreEqual(expected, actual);
+        //     Assert.Equals(expected, actual);
         // }
         
 

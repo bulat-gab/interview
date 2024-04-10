@@ -15,7 +15,7 @@ namespace Test.Array
 
             var actual = underTest.Run(input);
             
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(expected, actual);
         }
     }
 }

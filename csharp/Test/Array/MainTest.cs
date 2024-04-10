@@ -15,7 +15,7 @@ namespace Test.Array
 
             var actual = _underTest.LargestK(arr);
             
-            Assert.AreEqual(3, actual);
+            Assert.Equals(3, actual);
         }
 
         [Test]
@@ -25,7 +25,7 @@ namespace Test.Array
 
             var actual = _underTest.TwoElementsDifferBy1(arr);
             
-            Assert.AreEqual(true, actual);
+            Assert.Equals(true, actual);
         }
 
         [Test]
@@ -35,7 +35,7 @@ namespace Test.Array
 
             var actual = _underTest.LargestXOccuringXTimes(arr);
             
-            Assert.AreEqual(3, actual);
+            Assert.Equals(3, actual);
         }
     }
 }

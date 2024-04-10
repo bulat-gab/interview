@@ -20,12 +20,13 @@ namespace Test.String
             var actual = underTest.Run(input);
             Console.WriteLine(actual);
             
-            Assert.NotNull(actual);
-            Assert.AreEqual(input.Length, actual.Length);
+            Assert.That(actual, Is.Not.Null);
+            Assert.Equals(input.Length, actual.Length);
             for (int i = 0; i < input.Length - 1; i++)
             {
-                Assert.AreNotEqual(actual[i], actual[i + 1]);
-                CollectionAssert.Contains(_alphabet, actual[i]);
+                Assert.That(actual[i], Is.Not.EqualTo(actual[i + 1]));
+                Assert.That(_alphabet, Has.Member(actual[i]));
+
             }
         }
     }

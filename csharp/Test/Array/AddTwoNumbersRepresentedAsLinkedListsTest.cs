@@ -39,10 +39,10 @@ namespace Test.Array
             var underTest = new AddTwoNumbersRepresentedAsLinkedLists();
 
             var actual = underTest.Sum(first, second);
-            Assert.AreEqual(1, actual.Value);
-            Assert.AreEqual(4, actual.Next.Value);
-            Assert.AreEqual(0, actual.Next.Next.Value);
-            Assert.AreEqual(5, actual.Next.Next.Next.Value);
+            Assert.Equals(1, actual.Value);
+            Assert.Equals(4, actual.Next.Value);
+            Assert.Equals(0, actual.Next.Next.Value);
+            Assert.Equals(5, actual.Next.Next.Next.Value);
         }
     }
 }

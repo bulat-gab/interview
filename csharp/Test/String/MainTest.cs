@@ -16,7 +16,7 @@ namespace Test.String
         {
             var actual = _underTest.ReverseWords(input);
             
-            Assert.AreEqual(expected, actual);
+            Assert.Equals(expected, actual);
         }
         
         // [TestCase("the sky is blue", "the sky is blue")]
@@ -27,7 +27,7 @@ namespace Test.String
         // {
         //     var actual = _underTest.ReverseWords(input);
         //     
-        //     Assert.AreEqual(expected, actual);
+        //     Assert.Equals(expected, actual);
         // }
     }
 }

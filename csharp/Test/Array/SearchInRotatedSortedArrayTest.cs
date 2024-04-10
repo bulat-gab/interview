@@ -14,7 +14,7 @@ namespace Test.Array
             var key = 3;
             var actual = underTest.Search(arr, key);
             
-            Assert.AreEqual(8, actual);
+            Assert.Equals(8, actual);
         }
     }
 }
