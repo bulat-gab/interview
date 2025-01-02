@@ -1,0 +1,3 @@
+﻿using CsharpFeatures;
+
+Demo.CheckObject();
