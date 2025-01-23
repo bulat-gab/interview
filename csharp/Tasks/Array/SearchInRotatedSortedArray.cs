@@ -6,11 +6,11 @@ namespace Arrays
         public int Search(int[] array, int key)
         {
             int pivot = FindPivot(array, 0, array.Length - 1);
-            
+
             var result1 = BinarySearch(array, 0, pivot, key);
             var result2 = BinarySearch(array, pivot + 1, array.Length - 1, key);
-            
-            
+
+
             return result1 == -1 ? result2 : result1;
         }
 
@@ -31,7 +31,7 @@ namespace Arrays
             {
                 return mid;
             }
-            
+
             if (array[mid] < array[mid - 1] && mid > low)
             {
                 return (mid - 1);
@@ -41,7 +41,7 @@ namespace Arrays
             {
                 return FindPivot(array, low, mid - 1);
             }
-            
+
             return FindPivot(array, mid + 1, high);
         }
 
@@ -51,7 +51,7 @@ namespace Arrays
             {
                 return -1;
             }
-            
+
             var mid = (low + high) / 2;
             if (array[mid] == key)
             {

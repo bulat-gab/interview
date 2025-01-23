@@ -1,5 +1,5 @@
-using System;
 using NUnit.Framework;
+using System;
 using Tasks;
 
 namespace Test
@@ -14,7 +14,7 @@ namespace Test
         {
             var actual = underTest.Method1();
             Console.WriteLine(actual);
-            
+
         }
     }
 }

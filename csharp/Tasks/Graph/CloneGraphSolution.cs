@@ -2,12 +2,12 @@ using System.Collections.Generic;
 
 namespace Tasks.Graph
 {
-    public class Node 
+    public class Node
     {
         public int val { get; }
         public IList<Node> neighbors { get; }
 
-        public Node() 
+        public Node()
         {
             val = 0;
             neighbors = new List<Node>();
@@ -25,10 +25,10 @@ namespace Tasks.Graph
             this.neighbors = neighbors;
         }
     }
-    
+
     public class CloneGraphSolution
     {
-        public Node CloneGraph(Node node) 
+        public Node CloneGraph(Node node)
         {
             var visited = new Dictionary<int, Node>();
 
@@ -42,9 +42,9 @@ namespace Tasks.Graph
 
             if (visited.TryGetValue(node.val, out var existingNode))
                 return existingNode;
-            
+
             var newNode = new Node(node.val);
-            
+
             visited.Add(newNode.val, newNode);
 
             foreach (var neighbor in node.neighbors)
@@ -54,19 +54,19 @@ namespace Tasks.Graph
 
             return newNode;
         }
-        
-        public Node CloneGraph2(Node node) 
+
+        public Node CloneGraph2(Node node)
         {
             var visited = new Dictionary<int, Node>();
             // visited[node.val] = new Node(node.val);
-            
+
             var stack = new Stack<Node>();
             stack.Push(node);
 
             while (stack.Count != 0)
             {
                 var current = stack.Pop();
-                
+
                 var newNode = new Node(current.val);
                 visited[newNode.val] = newNode;
 
@@ -81,7 +81,7 @@ namespace Tasks.Graph
                 }
 
             }
-            
+
             return visited[node.val];
         }
     }

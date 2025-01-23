@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace Tasks.String
 {
     public class ReplaceQuestionMarks
@@ -7,7 +5,7 @@ namespace Tasks.String
         public string Run(string input)
         {
             char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToLower().ToCharArray();
-            
+
             if (string.IsNullOrEmpty(input))
             {
                 return string.Empty;
@@ -35,7 +33,7 @@ namespace Tasks.String
                     }
                 }
             }
-            
+
             return input;
         }
     }

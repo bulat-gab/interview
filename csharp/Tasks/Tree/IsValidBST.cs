@@ -13,7 +13,7 @@
             {
                 return true;
             }
-            
+
             int value = node.Value;
 
             if (value <= lower || value >= upper)

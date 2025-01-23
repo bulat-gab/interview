@@ -1,9 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Tasks.Graph;
 
 namespace Test.Graph;
@@ -69,7 +64,7 @@ public class Matrix01Test
 
             Assert.That(f1.Length, Is.EqualTo(s1.Length));
 
-            for(int j = 0; j < f1.Length; j++)
+            for (int j = 0; j < f1.Length; j++)
             {
                 Assert.That(f1[j], Is.EqualTo(s1[j]));
             }

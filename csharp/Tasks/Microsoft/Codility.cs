@@ -21,7 +21,7 @@ namespace Tasks.Microsoft
         }
 
         readonly HashSet<(int i, int j)> _visited = new HashSet<(int, int)>();
-        
+
         public void FindCheese(IMaze maze)
         {
             var stack = new Stack<(int, int)>();
@@ -29,7 +29,7 @@ namespace Tasks.Microsoft
             stack.Push((0, 0));
 
             var listOfMoves = new List<Direction>();
-            
+
             while (stack.Count != 0)
             {
                 var coord = stack.Pop();

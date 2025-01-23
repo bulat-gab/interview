@@ -36,7 +36,7 @@ namespace Arrays
 
                 maxSum = Math.Max(maxSum, dict[sum] + num);
             }
-            
+
             return maxSum;
         }
 

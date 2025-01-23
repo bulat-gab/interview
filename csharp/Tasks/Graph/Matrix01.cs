@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tasks.Graph;
 
@@ -68,8 +65,8 @@ public class Matrix01
                     continue;
                 }
 
-                int i = (int) nextCoord.Real;
-                int j = (int) nextCoord.Imaginary;
+                int i = (int)nextCoord.Real;
+                int j = (int)nextCoord.Imaginary;
 
                 if (mat[i][j] == 0)
                 {
@@ -93,7 +90,7 @@ public class Matrix01
         int N = mat.Length;
         int M = mat[0].Length;
 
-        return coord.Real >= 0 && coord.Real < N 
+        return coord.Real >= 0 && coord.Real < N
             && coord.Imaginary >= 0 && coord.Imaginary < M;
     }
 }
@@ -117,25 +114,25 @@ public class Matrix01SolutionTwo
         int ROWS = mat.Length;
         int COLS = mat[0].Length;
 
-        var queue = new Queue<(int,int)>();
+        var queue = new Queue<(int, int)>();
 
         for (int i = 0; i < ROWS; i++)
         {
             for (int j = 0; j < COLS; j++)
             {
-                 if (mat[i][j] == 0)
+                if (mat[i][j] == 0)
                     queue.Enqueue((i, j));
-                 else
+                else
                     mat[i][j] = -1;
             }
         }
-        
+
 
         while (queue.Count > 0)
         {
-            var (r,c) = queue.Dequeue();
+            var (r, c) = queue.Dequeue();
 
-            foreach(var (dr, dc) in directions)
+            foreach (var (dr, dc) in directions)
             {
                 var newR = r + dr;
                 var newC = c + dc;

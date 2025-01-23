@@ -1,5 +1,4 @@
 using System;
-using NUnit.Framework;
 
 namespace hackerrank
 {
@@ -11,8 +10,8 @@ namespace hackerrank
 0 0 0 2 0 0
 0 0 1 2 4 0
      */
-    
-    
+
+
     public class Hourglass
     {
         public static int hourglassSum(int[][] arr)
@@ -21,7 +20,7 @@ namespace hackerrank
             {
                 throw new ArgumentException();
             }
-            
+
             var max = Int32.MinValue;
             for (int x = 1; x < arr.Length - 1; x++)
             {
@@ -34,15 +33,15 @@ namespace hackerrank
                     }
                 }
             }
-            
+
             return max;
         }
 
         private static int CalculateHourGlass(int[][] arr, int x, int y)
         {
-            return arr[x+1][y-1] + arr[x+1][y] + arr[x+1][y+1] +
-                                   arr[x][y] + 
-                   arr[x-1][y-1] + arr[x-1][y] + arr[x-1][y+1];
+            return arr[x + 1][y - 1] + arr[x + 1][y] + arr[x + 1][y + 1] +
+                                   arr[x][y] +
+                   arr[x - 1][y - 1] + arr[x - 1][y] + arr[x - 1][y + 1];
         }
     }
 }

@@ -5,21 +5,21 @@ namespace Tasks.Tree
     public class Trie
     {
         private TrieNode _head;
-        
+
         /** Initialize your data structure here. */
-        public Trie() 
+        public Trie()
         {
             _head = new TrieNode();
         }
-    
+
         /** Inserts a word into the trie. */
         public void Insert(string word)
         {
             var cur = _head;
-            
+
             foreach (var ch in word)
             {
-                var code = (int) ch - (int) 'a';
+                var code = (int)ch - (int)'a';
                 if (cur.Edges[code] == null)
                 {
                     cur.Edges[code] = new TrieNode();
@@ -30,14 +30,14 @@ namespace Tasks.Tree
 
             cur.IsTerminal = true;
         }
-    
+
         /** Returns if the word is in the trie. */
         public bool Search(string word)
         {
             var cur = _head;
             foreach (var ch in word)
             {
-                var code = (int) ch - (int) 'a';
+                var code = (int)ch - (int)'a';
                 if (cur.Edges[code] == null)
                 {
                     return false;
@@ -49,14 +49,14 @@ namespace Tasks.Tree
 
             return cur.IsTerminal;
         }
-    
+
         /** Returns if there is any word in the trie that starts with the given prefix. */
         public bool StartsWith(string prefix)
         {
             var cur = _head;
             foreach (var ch in prefix)
             {
-                var code = (int) ch - (int) 'a';
+                var code = (int)ch - (int)'a';
                 if (cur.Edges[code] == null)
                 {
                     return false;

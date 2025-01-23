@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tasks.Hashmap;
+﻿namespace Tasks.Hashmap;
 
 /**
  * Your MyHashSet object will be instantiated and called as such:

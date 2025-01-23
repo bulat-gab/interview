@@ -1,4 +1,3 @@
-using System.Linq;
 using System.Text;
 
 namespace Tasks.String
@@ -21,17 +20,17 @@ namespace Tasks.String
         {
             if (string.IsNullOrWhiteSpace(s))
                 return s;
-            
-            
+
+
             // 1. Clean spaces
             var sb = CleanSpaces(s);
-            
+
             // 2. Reverse the whole string
             sb = Reverse(sb);
-            
+
             // 3. Reverse each word
             sb = ReverseWords(sb);
-            
+
             return sb.ToString();
 
 
@@ -97,7 +96,7 @@ namespace Tasks.String
                         i++;
                         k--;
                     }
-                    
+
                     // i = 
                 }
 

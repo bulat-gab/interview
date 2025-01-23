@@ -33,7 +33,7 @@ namespace Tasks.Microsoft
             { Direction.Left, (-1, 0) },
             { Direction.Right, (1, 0) }
         };
-        
+
         public void FindCheese(IMaze maze)
         {
             var visited = new HashSet<(int x, int y)>();

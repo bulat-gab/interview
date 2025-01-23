@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Arrays;
 using NUnit.Framework;
 
@@ -17,7 +16,7 @@ namespace Test.Array
                     Next = new Arrays.LinkedListNode<int>(3)
                 }
             };
-            
+
             var second = new Arrays.LinkedListNode<int>(8)
             {
                 Next = new Arrays.LinkedListNode<int>(4)
@@ -25,7 +24,7 @@ namespace Test.Array
                     Next = new Arrays.LinkedListNode<int>(2)
                 }
             };
-            
+
             // var expected = new Arrays.LinkedListNode<int>(1)
             // {
             //     Next = new Arrays.LinkedListNode<int>(4)

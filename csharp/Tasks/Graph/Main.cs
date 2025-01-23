@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
 
 namespace Tasks.Graph
@@ -36,8 +34,8 @@ namespace Tasks.Graph
 
             return pacific
                 .Intersect(atlantic)
-                .Select(coordinate => 
-                    (IList<int>) new List<int> {coordinate.x, coordinate.y})
+                .Select(coordinate =>
+                    (IList<int>)new List<int> { coordinate.x, coordinate.y })
                 .ToList();
 
             void DFS(ISet<(int x, int y)> visited, int x, int y)
@@ -62,28 +60,28 @@ namespace Tasks.Graph
         {
             if (grid.Length == 0 || grid[0].Length == 0 || string.IsNullOrEmpty(word))
                 return false;
-        
+
             var N = grid.Length;
             var M = grid[0].Length;
-            
+
             for (int i = 0; i < N; i++)
             {
                 for (int j = 0; j < M; j++)
                 {
-                     if (grid[i][j] == word[0] 
-                        && DFS(word.Substring(1), i, j, new HashSet<(int x, int y)>()))
+                    if (grid[i][j] == word[0]
+                       && DFS(word.Substring(1), i, j, new HashSet<(int x, int y)>()))
                         return true;
 
                 }
             }
-            
+
             return false;
-            
+
             bool DFS(string word, int x, int y, HashSet<(int x, int y)> visited)
             {
                 var N = grid.Length;
                 var M = grid[0].Length;
-        
+
                 foreach (var (dx, dy) in GraphUtils.Directions)
                 {
                     var nextX = x + dx;
@@ -93,7 +91,7 @@ namespace Tasks.Graph
                         && !visited.Contains((nextX, nextY))
                         && grid[nextX][nextY] == word[0])
                     {
-                        return word.Length <= 1 
+                        return word.Length <= 1
                                || DFS(word.Substring(1), nextX, nextY, visited);
                     }
                 }
@@ -109,7 +107,7 @@ namespace Tasks.Graph
             var N = matrix.Length;
             var M = matrix[0].Length;
             var expectedSize = N * M;
-            
+
             var result = new List<int>();
 
             var startMargin = 0;
@@ -131,7 +129,7 @@ namespace Tasks.Graph
                     result.Add(matrix[N - 1 - endMargin][i]);
                 if (result.Count == expectedSize)
                     return result;
-                
+
                 for (int i = N - 2 - endMargin; i > startMargin; i--)
                     result.Add(matrix[i][startMargin]);
                 if (result.Count == expectedSize)
@@ -146,6 +144,6 @@ namespace Tasks.Graph
 
 
         }
-        
+
     }
 }

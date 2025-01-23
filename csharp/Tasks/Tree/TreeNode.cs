@@ -13,7 +13,7 @@
             this.right = right;
         }
     }
-    
+
     public class TreeNode
     {
         public int val { get; set; }

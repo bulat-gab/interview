@@ -1,6 +1,5 @@
-using System;
-using System.Linq;
 using NUnit.Framework;
+using System;
 using Tasks.String;
 
 namespace Test.String
@@ -19,7 +18,7 @@ namespace Test.String
         {
             var actual = underTest.Run(input);
             Console.WriteLine(actual);
-            
+
             Assert.That(actual, Is.Not.Null);
             Assert.Equals(input.Length, actual.Length);
             for (int i = 0; i < input.Length - 1; i++)

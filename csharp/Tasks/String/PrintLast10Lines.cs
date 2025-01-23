@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Tasks.String
 {
@@ -26,7 +25,7 @@ namespace Tasks.String
                 if (input[i] == '\n')
                 {
                     var charArray = tempString.ToCharArray();
-                    Array.Reverse(charArray);
+                    charArray = charArray.Reverse().ToArray();
                     result.Add(new string(charArray));
                     count++;
                     tempString = "";

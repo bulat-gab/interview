@@ -5,7 +5,7 @@ namespace hackerrank
     public class MinimumSwaps
     {
         private static int swaps = 0;
-        
+
         public static int minimumSwaps(int[] arr)
         {
             var sorted = false;
@@ -42,11 +42,11 @@ namespace hackerrank
         [Test]
         public void Test1()
         {
-            var arr = new int[] {7, 1, 3, 2, 4, 5, 6 };
+            var arr = new int[] { 7, 1, 3, 2, 4, 5, 6 };
             var expected = 5;
-            
+
             var actual = MinimumSwaps.minimumSwaps(arr);
-            
+
             Assert.Equals(expected, actual);
         }
     }

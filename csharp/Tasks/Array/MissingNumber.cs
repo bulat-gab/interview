@@ -4,10 +4,10 @@ namespace Arrays
 {
     class MissingNumber
     {
-        static void Main(string[] args)
+        static void MissingNumberExample(string[] args)
         {
             const int N = 10;
-            int[] C = {1, 2, 3, 4, 5, 6, 7, 8, 10};
+            int[] C = { 1, 2, 3, 4, 5, 6, 7, 8, 10 };
 
             Console.WriteLine(FindMissingNumber(N, C));
 

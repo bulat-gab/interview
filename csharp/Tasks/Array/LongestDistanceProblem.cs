@@ -7,7 +7,7 @@ namespace Arrays
         public int Run(int[] arr)
         {
             var n = arr.Length;
-            
+
             var r = new int[n];
             r[n - 1] = n - 1;
             for (int i = n - 2; i >= 0; i--)
@@ -17,7 +17,7 @@ namespace Arrays
                     r[i] = r[i + 1];
             }
 
-            var l = new int [n];
+            var l = new int[n];
             l[0] = 0;
             for (int i = 1; i < n; i++)
             {
@@ -25,16 +25,16 @@ namespace Arrays
                 if (arr[i] <= arr[i - 1])
                     l[i] = l[i - 1];
             }
-            
+
             var maxDistance = 1;
             for (int i = 0; i < n; i++)
             {
                 maxDistance = Math.Max(maxDistance, r[i] - l[i] + 1);
             }
-            
+
             return maxDistance;
         }
-        
+
         // O(n^2) solution
         //
         // public int Run(int[] arr)

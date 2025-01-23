@@ -4,8 +4,8 @@ namespace Arrays
     {
         public LinkedListNode<int> Sum(LinkedListNode<int> first, LinkedListNode<int> second)
         {
-            
-            
+
+
             return new LinkedListNode<int>(1);
         }
     }

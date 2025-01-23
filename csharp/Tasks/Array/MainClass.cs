@@ -1,10 +1,10 @@
+using Priority_Queue;
 using System;
 using System.Collections.Generic;
-using Priority_Queue;
 
 namespace Arrays
 {
-    public class Main
+    public class MainClass
     {
         /// Largest K such that both K and -K exist in array
         public int LargestK(int[] arr)
@@ -87,7 +87,7 @@ namespace Arrays
         //
         //     return 0;
         // }
-        
+
         // Time: O(N), Space: O(N)
         public int LargestXOccuringXTimes(int[] arr)
         {
@@ -106,18 +106,18 @@ namespace Arrays
                     max = Math.Max(max, number);
                 }
             }
-            
+
             return max;
         }
 
         public IList<int> TopKFrequentElements(int[] nums, int k)
         {
-            var dict = new Dictionary<int ,int>();
+            var dict = new Dictionary<int, int>();
             foreach (var num in nums)
             {
                 dict[num] = dict.GetValueOrDefault(num, 0) + 1;
             }
-            
+
             var pq = new SimplePriorityQueue<int>();
             foreach (var (num, frequency) in dict)
             {
@@ -131,9 +131,9 @@ namespace Arrays
             }
 
             return result;
-        } 
-        
-        public int[][] IntervalIntersection(int[][] firstList, int[][] secondList) 
+        }
+
+        public int[][] IntervalIntersection(int[][] firstList, int[][] secondList)
         {
             throw new NotImplementedException();
         }

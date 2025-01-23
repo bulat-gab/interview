@@ -1,5 +1,5 @@
-using System;
 using NUnit.Framework;
+using System;
 using Tasks.Microsoft;
 
 namespace Test.Microsoft
@@ -16,7 +16,7 @@ namespace Test.Microsoft
             _underTest = new Codility();
             _solution = new Tasks.Microsoft.Solution();
         }
-        
+
         // [TestCase(1, new int[] { })]
         // [TestCase(1, new int[] {  } )]
         // public void Test1(int expected, int[] input)
@@ -25,7 +25,7 @@ namespace Test.Microsoft
         //
         //     Assert.Equals(expected, actual);
         // }
-        
+
 
         [Test]
         public void Test3()

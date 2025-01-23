@@ -9,11 +9,11 @@ namespace Tasks
         {
             Console.WriteLine("Destructor call");
         }
-        
+
         public int Method1()
         {
             int a = 5;
-            
+
             int newA = Method2(ref a);
             return newA;
         }
