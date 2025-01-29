@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasks", "Tasks\Tasks.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpFeatures", "CsharpFeatures\CsharpFeatures.csproj", "{325EAD91-8601-4625-B086-8EB56D8A3E09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{68E845ED-B136-4DD0-849D-B76477F18396}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{325EAD91-8601-4625-B086-8EB56D8A3E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{325EAD91-8601-4625-B086-8EB56D8A3E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{325EAD91-8601-4625-B086-8EB56D8A3E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68E845ED-B136-4DD0-849D-B76477F18396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E845ED-B136-4DD0-849D-B76477F18396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E845ED-B136-4DD0-849D-B76477F18396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E845ED-B136-4DD0-849D-B76477F18396}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
