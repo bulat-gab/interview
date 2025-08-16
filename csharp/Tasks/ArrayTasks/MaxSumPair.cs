@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Arrays
+namespace Tasks.ArrayTasks
 {
     /// <summary>
     /// дан лист чисел. надо найти максимальную из сумм пар чисел, имеющих одинаковую сумму цифр. Return sum of the pair

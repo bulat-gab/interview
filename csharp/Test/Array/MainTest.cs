@@ -1,5 +1,5 @@
-using Arrays;
 using NUnit.Framework;
+using Tasks.ArrayTasks;
 
 namespace Test.Array
 {

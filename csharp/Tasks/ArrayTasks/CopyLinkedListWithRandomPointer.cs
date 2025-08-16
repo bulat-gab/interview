@@ -1,6 +1,6 @@
 // using System.Collections.Generic;
 //
-// namespace Arrays
+// namespace Tasks.ArrayTasks
 // {
 //     public class CopyLinkedListWithRandomPointer
 //     {

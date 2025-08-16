@@ -1,4 +1,4 @@
-using Arrays;
+using Tasks.ArrayTasks;
 using NUnit.Framework;
 
 namespace Test.Array

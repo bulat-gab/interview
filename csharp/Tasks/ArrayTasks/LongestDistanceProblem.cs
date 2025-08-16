@@ -1,6 +1,6 @@
 using System;
 
-namespace Arrays
+namespace Tasks.ArrayTasks
 {
     public class LongestDistanceProblem
     {

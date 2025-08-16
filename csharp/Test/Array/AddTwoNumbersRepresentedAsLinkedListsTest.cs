@@ -1,4 +1,4 @@
-using Arrays;
+using Tasks.ArrayTasks;
 using NUnit.Framework;
 
 namespace Test.Array
@@ -9,29 +9,29 @@ namespace Test.Array
         [Test]
         public void Test1()
         {
-            var first = new Arrays.LinkedListNode<int>(5)
+            var first = new LinkedListNode<int>(5)
             {
-                Next = new Arrays.LinkedListNode<int>(6)
+                Next = new LinkedListNode<int>(6)
                 {
-                    Next = new Arrays.LinkedListNode<int>(3)
+                    Next = new LinkedListNode<int>(3)
                 }
             };
 
-            var second = new Arrays.LinkedListNode<int>(8)
+            var second = new LinkedListNode<int>(8)
             {
-                Next = new Arrays.LinkedListNode<int>(4)
+                Next = new LinkedListNode<int>(4)
                 {
-                    Next = new Arrays.LinkedListNode<int>(2)
+                    Next = new LinkedListNode<int>(2)
                 }
             };
 
-            // var expected = new Arrays.LinkedListNode<int>(1)
+            // var expected = new LinkedListNode<int>(1)
             // {
-            //     Next = new Arrays.LinkedListNode<int>(4)
+            //     Next = new LinkedListNode<int>(4)
             //     {
-            //         Next = new Arrays.LinkedListNode<int>(0)
+            //         Next = new LinkedListNode<int>(0)
             //         {
-            //             Next = new Arrays.LinkedListNode<int>(5)
+            //             Next = new LinkedListNode<int>(5)
             //         }
             //     }
             // };

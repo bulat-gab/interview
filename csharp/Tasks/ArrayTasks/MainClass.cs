@@ -1,10 +1,10 @@
-using Priority_Queue;
 using System;
 using System.Collections.Generic;
+using Priority_Queue;
 
-namespace Arrays
+namespace Tasks.ArrayTasks
 {
-    public class MainClass
+    public class Main
     {
         /// Largest K such that both K and -K exist in array
         public int LargestK(int[] arr)
@@ -43,7 +43,8 @@ namespace Arrays
                 return false;
             }
 
-            Array.Sort(arr);
+            System.Array.Sort(arr);
+            
             for (int i = 0; i < n - 1; i++)
             {
                 if (Math.Abs(arr[i] - arr[i + 1]) == 1)

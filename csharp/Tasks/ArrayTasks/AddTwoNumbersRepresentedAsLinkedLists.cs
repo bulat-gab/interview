@@ -1,4 +1,4 @@
-namespace Arrays
+namespace Tasks.ArrayTasks
 {
     public class AddTwoNumbersRepresentedAsLinkedLists
     {

@@ -1,4 +1,4 @@
-﻿namespace Tasks.Array
+﻿namespace Tasks.ArrayTasks
 {
     public class BinarySearch
     {
